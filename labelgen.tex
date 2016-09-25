@@ -1,0 +1,68 @@
+\documentclass[landscape,a4paper,12pt]{article}
+\usepackage[newdimens]{labels}
+\usepackage{amssymb}
+\usepackage{qrcode}
+\usepackage{multirow}
+\usepackage{pbox}
+\LabelCols=3% Number of columns of labels per page
+\LabelRows=10% Number of rows of labels per page
+\LeftPageMargin=28mm% These four parameters give the
+\RightPageMargin=28mm% page gutter sizes. The outer edges of
+\TopPageMargin=6mm% the outer labels are the specified
+\BottomPageMargin=16mm% distances from the edge of the paper.
+\InterLabelColumn=2.5mm% Gap between columns of labels
+\InterLabelRow=2.5mm% Gap between rows of labels
+\LeftLabelBorder=1mm% These four parameters give the extra
+\RightLabelBorder=1mm% space used around the text on each
+\TopLabelBorder=1mm% actual label.
+\BottomLabelBorder=1mm%
+\renewcommand{\familydefault}{\sfdefault}
+
+\begin{document}% End of preamble
+
+\newcounter{qrcounter}
+\setcounter{qrcounter}{2000}
+
+\newcommand{\qrlabel}{
+  \genericlabel{%
+    \begin{tabular}{lll}
+    {\tiny $\square$ QR Active}                 & \multirow{2}{*}{\qrcode[height=15mm]{http://qr.hal9k.dk/HQR\theqrcounter}} & DO NOT HACK \\[4mm]
+    \pbox{1cm}{\tiny qr.hal9k.dk/\\HQR\theqrcounter}  &  &  \\\cline{3-3}
+    \end{tabular}
+  }
+  \stepcounter{qrcounter}
+}
+
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+\qrlabel
+
+
+\end{document}
